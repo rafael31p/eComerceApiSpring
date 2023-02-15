@@ -1,9 +1,6 @@
 package com.example.EComerceRafaelSama.persistence.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "compras_productos")
@@ -14,6 +11,13 @@ public class compraProducto {
     private Double total;
     private Boolean estado;
 
+    @ManyToOne
+    @JoinColumn(name = "id_compra", insertable = false, updatable = false)
+    private compra compras;
+
+    @ManyToOne
+    @JoinColumn(name = "id_producto", insertable = false, updatable = false)
+    private producto producto;
     public compraProductoPk getId() {
         return Id;
     }

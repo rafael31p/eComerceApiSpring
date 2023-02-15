@@ -2,11 +2,12 @@ package com.example.EComerceRafaelSama.persistence.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "clientes")
 public class cliente {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private String idCliente;
 
@@ -19,6 +20,9 @@ public class cliente {
     private String direccion;
     @Column(name = "correo_electronico")
     private String correoElectronico;
+
+    @OneToMany(mappedBy = "cliente")
+    private List<compra> compras;
 
     public String getIdCliente() {
         return idCliente;
