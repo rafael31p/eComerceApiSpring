@@ -4,6 +4,7 @@ import com.example.EComerceRafaelSama.domain.repository.productRepository;
 import com.example.EComerceRafaelSama.persistence.Mapper.ProductMapper;
 import com.example.EComerceRafaelSama.persistence.entity.producto;
 import com.example.EComerceRafaelSama.persistence.crud.ProductoCrudRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -11,8 +12,9 @@ import java.util.Optional;
 
 @Repository
 public class ProductoRepository implements productRepository {
+    @Autowired
     private ProductoCrudRepository productoCrudRepository;
-
+    @Autowired
     private ProductMapper mapper;
     @Override
     public List<Product> getAll(){
@@ -34,7 +36,7 @@ public class ProductoRepository implements productRepository {
 
     @Override
     public Optional<Product> getProduct(int productId) {
-        return Optional.empty();
+        return productoCrudRepository.findById(productId).map(product -> mapper.toProduct(product));
     }
 
     @Override
@@ -52,9 +54,8 @@ public class ProductoRepository implements productRepository {
     public Optional<producto> getProducto(int idProducto){
         return productoCrudRepository.findById(idProducto);
     }
-    public producto save(producto producto){
-        return productoCrudRepository.save(producto);
-    }
+
+    @Override
     public void delete(int idProducto){
         productoCrudRepository.deleteById(idProducto);
     }
