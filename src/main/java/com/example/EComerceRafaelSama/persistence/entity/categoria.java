@@ -2,11 +2,12 @@ package com.example.EComerceRafaelSama.persistence.entity;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
 @Table(name = "categorias")
-public class categoria {
+public class categoria implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_categoria")
@@ -17,6 +18,14 @@ public class categoria {
 
     @OneToMany(mappedBy = "categoria")
     private List<producto> productos;
+
+    public List<producto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(List<producto> productos) {
+        this.productos = productos;
+    }
 
     public Integer getIdCategoria() {
         return idCategoria;

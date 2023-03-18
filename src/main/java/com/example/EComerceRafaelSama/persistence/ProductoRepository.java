@@ -19,19 +19,19 @@ public class ProductoRepository implements productRepository {
     @Override
     public List<Product> getAll(){
         List<producto> productos= (List<producto>) productoCrudRepository.findAll();
-        return mapper.toProducts(productos);
+        return mapper.toProductos(productos);
     }
 
     @Override
     public Optional<List<Product>> getByCategory(int categoryId) {
         List<producto> productos= productoCrudRepository.findByIdCategoriaOrderByNombreAsc(categoryId);
-        return Optional.of(mapper.toProducts(productos));
+        return Optional.of(mapper.toProductos(productos));
     }
 
     @Override
     public Optional<List<Product>> getScarseProduct(int quantity) {
         Optional<List<producto>> productos = productoCrudRepository.findByCantidadStockLessThanAndEstado(quantity, true);
-        return productos.map(prods -> mapper.toProducts(prods));
+        return productos.map(prods -> mapper.toProductos(prods));
     }
 
     @Override
