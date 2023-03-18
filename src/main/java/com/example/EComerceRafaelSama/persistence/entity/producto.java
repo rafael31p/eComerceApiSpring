@@ -19,13 +19,22 @@ public class producto {
     @Column(name = "precio_venta")
     private Double precioVenta;
     @Column(name = "cantidad_stock")
-    private Integer cantidadStock;
+    private Integer cantidad;
 
     private Boolean estado;
 
     @ManyToOne
     @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
     private categoria categoria;
+
+    public com.example.EComerceRafaelSama.persistence.entity.categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(com.example.EComerceRafaelSama.persistence.entity.categoria categoria) {
+        this.categoria = categoria;
+    }
+
     public Integer getIdProducto() {
         return idProducto;
     }
@@ -66,12 +75,12 @@ public class producto {
         this.precioVenta = precioVenta;
     }
 
-    public Integer getCantidadStock() {
-        return cantidadStock;
+    public Integer getCantidad() {
+        return cantidad;
     }
 
-    public void setCantidadStock(Integer cantidadStock) {
-        this.cantidadStock = cantidadStock;
+    public void setCantidad(Integer cantidad) {
+        this.cantidad = cantidad;
     }
 
     public Boolean getEstado() {

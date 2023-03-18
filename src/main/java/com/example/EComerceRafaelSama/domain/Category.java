@@ -2,8 +2,8 @@ package com.example.EComerceRafaelSama.domain;
 
 public class Category {
     private int categoryId;
-    private String category;
-    private boolean active;
+    private String descripcion;
+    private boolean estado;
 
     public int getCategoryId() {
         return categoryId;
@@ -13,19 +13,19 @@ public class Category {
         this.categoryId = categoryId;
     }
 
-    public String getCategory() {
-        return category;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
-    public boolean isActive() {
-        return active;
+    public boolean isEstado() {
+        return estado;
     }
 
-    public void setActive(boolean active) {
-        this.active = active;
+    public void setEstado(boolean estado) {
+        this.estado = estado;
     }
 }

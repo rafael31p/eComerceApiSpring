@@ -1,67 +1,76 @@
 package com.example.EComerceRafaelSama.domain;
 
 public class Product {
-    private int productId;
-    private String name;
-    private int categoryId;
-    private double price;
-    private int stock;
-    private boolean active;
-    private Category category;
+    private int idProducto;
+    private String nombre;
+    private int idCategoria;
+    private double precioVenta;
+    private int cantidad;
+    private boolean estado;
+    private String codigoBarra;
 
-    public int getProductId() {
-        return productId;
+    private Category categoria;
+    public String getCodigoBarra() {
+        return codigoBarra;
     }
 
-    public void setProductId(int productId) {
-        this.productId = productId;
+    public void setCodigoBarra(String codigoBarra) {
+        this.codigoBarra = codigoBarra;
     }
 
-    public String getName() {
-        return name;
+    public int getIdProducto() {
+        return idProducto;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setIdProducto(int idProducto) {
+        this.idProducto = idProducto;
     }
 
-    public int getCategoryId() {
-        return categoryId;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setCategoryId(int categoryId) {
-        this.categoryId = categoryId;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public double getPrice() {
-        return price;
+    public int getIdCategoria() {
+        return idCategoria;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setIdCategoria(int idCategoria) {
+        this.idCategoria = idCategoria;
     }
 
-    public int getStock() {
-        return stock;
+    public double getPrecioVenta() {
+        return precioVenta;
     }
 
-    public void setStock(int stock) {
-        this.stock = stock;
+    public void setPrecioVenta(double precioVenta) {
+        this.precioVenta = precioVenta;
     }
 
-    public boolean isActive() {
-        return active;
+    public int getCantidad() {
+        return cantidad;
     }
 
-    public void setActive(boolean active) {
-        this.active = active;
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
 
-    public Category getCategory() {
-        return category;
+    public boolean isEstado() {
+        return estado;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+
+    public Category getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Category categoria) {
+        this.categoria = categoria;
     }
 }
