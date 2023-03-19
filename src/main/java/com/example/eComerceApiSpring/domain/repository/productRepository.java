@@ -1,6 +1,6 @@
-package com.example.EComerceRafaelSama.domain.repository;
+package com.example.eComerceApiSpring.domain.repository;
 
-import com.example.EComerceRafaelSama.domain.Product;
+import com.example.eComerceApiSpring.domain.Product;
 
 import java.util.List;
 import java.util.Optional;

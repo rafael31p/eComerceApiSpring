@@ -1,7 +1,7 @@
-package com.example.EComerceRafaelSama.domain.service;
+package com.example.eComerceApiSpring.domain.service;
 
-import com.example.EComerceRafaelSama.domain.Product;
-import com.example.EComerceRafaelSama.persistence.ProductoRepository;
+import com.example.eComerceApiSpring.domain.Product;
+import com.example.eComerceApiSpring.persistence.ProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;

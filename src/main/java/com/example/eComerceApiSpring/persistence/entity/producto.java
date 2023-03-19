@@ -1,4 +1,4 @@
-package com.example.EComerceRafaelSama.persistence.entity;
+package com.example.eComerceApiSpring.persistence.entity;
 
 import jakarta.persistence.*;
 
@@ -27,11 +27,11 @@ public class producto {
     @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
     private categoria categoria;
 
-    public com.example.EComerceRafaelSama.persistence.entity.categoria getCategoria() {
+    public com.example.eComerceApiSpring.persistence.entity.categoria getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(com.example.EComerceRafaelSama.persistence.entity.categoria categoria) {
+    public void setCategoria(com.example.eComerceApiSpring.persistence.entity.categoria categoria) {
         this.categoria = categoria;
     }
 

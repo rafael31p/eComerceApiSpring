@@ -1,9 +1,9 @@
-package com.example.EComerceRafaelSama.persistence;
-import com.example.EComerceRafaelSama.domain.Product;
-import com.example.EComerceRafaelSama.domain.repository.productRepository;
-import com.example.EComerceRafaelSama.persistence.Mapper.ProductMapper;
-import com.example.EComerceRafaelSama.persistence.entity.producto;
-import com.example.EComerceRafaelSama.persistence.crud.ProductoCrudRepository;
+package com.example.eComerceApiSpring.persistence;
+import com.example.eComerceApiSpring.domain.Product;
+import com.example.eComerceApiSpring.domain.repository.productRepository;
+import com.example.eComerceApiSpring.persistence.Mapper.ProductMapper;
+import com.example.eComerceApiSpring.persistence.entity.producto;
+import com.example.eComerceApiSpring.persistence.crud.ProductoCrudRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

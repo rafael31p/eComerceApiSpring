@@ -1,4 +1,4 @@
-package com.example.EComerceRafaelSama.domain;
+package com.example.eComerceApiSpring.domain;
 
 public class Category {
     private int categoryId;

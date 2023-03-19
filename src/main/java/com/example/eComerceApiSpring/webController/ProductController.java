@@ -1,7 +1,7 @@
-package com.example.EComerceRafaelSama.webController;
+package com.example.eComerceApiSpring.webController;
 
-import com.example.EComerceRafaelSama.domain.Product;
-import com.example.EComerceRafaelSama.domain.service.ProductService;
+import com.example.eComerceApiSpring.domain.Product;
+import com.example.eComerceApiSpring.domain.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

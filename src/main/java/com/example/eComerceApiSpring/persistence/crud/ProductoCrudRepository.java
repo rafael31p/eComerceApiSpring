@@ -1,5 +1,5 @@
-package com.example.EComerceRafaelSama.persistence.crud;
-import com.example.EComerceRafaelSama.persistence.entity.producto;
+package com.example.eComerceApiSpring.persistence.crud;
+import com.example.eComerceApiSpring.persistence.entity.producto;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

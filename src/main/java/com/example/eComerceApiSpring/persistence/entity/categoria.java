@@ -1,4 +1,4 @@
-package com.example.EComerceRafaelSama.persistence.entity;
+package com.example.eComerceApiSpring.persistence.entity;
 
 import jakarta.persistence.*;
 

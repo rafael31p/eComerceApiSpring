@@ -1,8 +1,7 @@
-package com.example.EComerceRafaelSama.persistence.entity;
+package com.example.eComerceApiSpring.persistence.entity;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
