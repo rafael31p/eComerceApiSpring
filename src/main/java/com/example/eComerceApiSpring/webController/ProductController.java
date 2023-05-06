@@ -3,8 +3,8 @@ package com.example.eComerceApiSpring.webController;
 import com.example.eComerceApiSpring.domain.Product;
 import com.example.eComerceApiSpring.domain.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.data.repository.query.Param;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,14 +14,17 @@ import java.util.Optional;
 public class ProductController {
     @Autowired
     private final ProductService productService;
-
     public ProductController(ProductService productService) {
         this.productService = productService;
     }
+
+    @GetMapping("/all")
     public List<Product> getAll(){
         return productService.getAll();
     }
-    public Optional<Product> getProduct(int productId){
+
+    @GetMapping("/{id}")
+    public Optional<Product> getProduct(@RequestParam(value = "productId") int productId){
         return productService.getProduct(productId);
     }
     public Optional<List<Product>> getByCategory(int categoriaId){

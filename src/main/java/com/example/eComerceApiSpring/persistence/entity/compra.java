@@ -25,7 +25,7 @@ public class compra {
     @ManyToOne
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private cliente cliente;
-    @ManyToMany(mappedBy = "compras")
+    @OneToMany(mappedBy = "compras")
     private List<compraProducto> productos;
 
     public Integer getIdCompra() {

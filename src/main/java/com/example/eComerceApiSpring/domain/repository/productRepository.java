@@ -10,6 +10,15 @@ public interface productRepository {
     Optional<List<Product>> getByCategory(int categoryId);
     Optional<List<Product>> getScarseProduct(int quantity);
     Optional<Product> getProduct(int productId);
+
+    Optional<List<Product>> getByCategory(Integer categoryId);
+
+    Optional<List<Product>> getScarseProduct(Integer quantity);
+
+    Optional<Product> getProduct(Integer productId);
+
     Product save(Product product);
-    void delete(int productId);
+    void delete(Integer productId);
+
+    void delete(int idProducto);
 }

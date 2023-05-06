@@ -1,12 +1,12 @@
 package com.example.eComerceApiSpring.domain;
 
 public class Product {
-    private int idProducto;
+    private Integer idProducto;
     private String nombre;
-    private int idCategoria;
-    private double precioVenta;
-    private int cantidad;
-    private boolean estado;
+    private Integer idCategoria;
+    private Double precioVenta;
+    private Integer cantidad;
+    private Boolean estado;
     private String codigoBarra;
 
     private Category categoria;
@@ -18,11 +18,11 @@ public class Product {
         this.codigoBarra = codigoBarra;
     }
 
-    public int getIdProducto() {
+    public Integer getIdProducto() {
         return idProducto;
     }
 
-    public void setIdProducto(int idProducto) {
+    public void setIdProducto(Integer idProducto) {
         this.idProducto = idProducto;
     }
 
@@ -34,35 +34,35 @@ public class Product {
         this.nombre = nombre;
     }
 
-    public int getIdCategoria() {
+    public Integer getIdCategoria() {
         return idCategoria;
     }
 
-    public void setIdCategoria(int idCategoria) {
+    public void setIdCategoria(Integer idCategoria) {
         this.idCategoria = idCategoria;
     }
 
-    public double getPrecioVenta() {
+    public Double getPrecioVenta() {
         return precioVenta;
     }
 
-    public void setPrecioVenta(double precioVenta) {
+    public void setPrecioVenta(Double precioVenta) {
         this.precioVenta = precioVenta;
     }
 
-    public int getCantidad() {
+    public Integer getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(int cantidad) {
+    public void setCantidad(Integer cantidad) {
         this.cantidad = cantidad;
     }
 
-    public boolean isEstado() {
+    public Boolean isEstado() {
         return estado;
     }
 
-    public void setEstado(boolean estado) {
+    public void setEstado(Boolean estado) {
         this.estado = estado;
     }
 

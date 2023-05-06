@@ -24,18 +24,33 @@ public class ProductoRepository implements productRepository {
 
     @Override
     public Optional<List<Product>> getByCategory(int categoryId) {
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<List<Product>> getScarseProduct(int quantity) {
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<Product> getProduct(int productId) {
+        return Optional.empty();
+    }
+
+    @Override
+    public Optional<List<Product>> getByCategory(Integer categoryId) {
         List<producto> productos= productoCrudRepository.findByIdCategoriaOrderByNombreAsc(categoryId);
         return Optional.of(mapper.toProductos(productos));
     }
 
     @Override
-    public Optional<List<Product>> getScarseProduct(int quantity) {
-        Optional<List<producto>> productos = productoCrudRepository.findByCantidadStockLessThanAndEstado(quantity, true);
+    public Optional<List<Product>> getScarseProduct(Integer quantity) {
+        Optional<List<producto>> productos = productoCrudRepository.findByCantidadLessThanAndEstado(quantity, true);
         return productos.map(prods -> mapper.toProductos(prods));
     }
 
     @Override
-    public Optional<Product> getProduct(int productId) {
+    public Optional<Product> getProduct(Integer productId) {
         return productoCrudRepository.findById(productId).map(product -> mapper.toProduct(product));
     }
 
@@ -45,13 +60,18 @@ public class ProductoRepository implements productRepository {
         return mapper.toProduct(producto);
     }
 
-    public List<producto> getByCategoria(int idCategoria){
+    @Override
+    public void delete(Integer productId) {
+
+    }
+
+    public List<producto> getByCategoria(Integer idCategoria){
         return productoCrudRepository.findByIdCategoriaOrderByNombreAsc(idCategoria);
     }
-    public Optional<List<producto>> getEscasos(int cantidad){
-        return productoCrudRepository.findByCantidadStockLessThanAndEstado(cantidad, true);
+    public Optional<List<producto>> getEscasos(Integer cantidad){
+        return productoCrudRepository.findByCantidadLessThanAndEstado(cantidad, true);
     }
-    public Optional<producto> getProducto(int idProducto){
+    public Optional<producto> getProducto(Integer idProducto){
         return productoCrudRepository.findById(idProducto);
     }
 

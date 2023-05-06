@@ -1,15 +1,15 @@
 package com.example.eComerceApiSpring.domain;
 
 public class Category {
-    private int categoryId;
+    private Integer categoryId;
     private String descripcion;
-    private boolean estado;
+    private Boolean estado;
 
-    public int getCategoryId() {
+    public Integer getCategoryId() {
         return categoryId;
     }
 
-    public void setCategoryId(int categoryId) {
+    public void setCategoryId(Integer categoryId) {
         this.categoryId = categoryId;
     }
 
@@ -21,11 +21,11 @@ public class Category {
         this.descripcion = descripcion;
     }
 
-    public boolean isEstado() {
+    public Boolean isEstado() {
         return estado;
     }
 
-    public void setEstado(boolean estado) {
+    public void setEstado(Boolean estado) {
         this.estado = estado;
     }
 }
