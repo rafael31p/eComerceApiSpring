@@ -1,7 +1,7 @@
 package com.example.eComerceApiSpring.persistence.Mapper;
 
 import com.example.eComerceApiSpring.domain.Product;
-import com.example.eComerceApiSpring.persistence.entity.producto;
+import com.example.eComerceApiSpring.persistence.entity.Producto;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -20,11 +20,11 @@ public interface ProductMapper {
             @Mapping(source = "estado",target = "estado"),
             @Mapping(source = "categoria",target = "categoria")
     })
-    Product toProduct(producto producto);
-    List<Product> toProductos(List<producto> products);
+    Product toProduct(Producto producto);
+    List<Product> toProductos(List<Producto> products);
 
     @InheritInverseConfiguration
-    @Mapping(target = "codigoBarras", ignore = true)
-    producto toProduct(Product product);
+    @Mapping(target = "codigoBarra", ignore = true)
+    Producto toProduct(Product product);
 
 }

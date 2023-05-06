@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "productos")
-public class producto {
+public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_producto")
@@ -15,7 +15,7 @@ public class producto {
     @Column(name = "id_categoria")
     private Integer idCategoria;
     @Column(name = "codigo_barras")
-    private String codigoBarras;
+    private String codigoBarra;
     @Column(name = "precio_venta")
     private Double precioVenta;
     @Column(name = "cantidad_stock")
@@ -25,13 +25,13 @@ public class producto {
 
     @ManyToOne
     @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
-    private categoria categoria;
+    private Categoria categoria;
 
-    public com.example.eComerceApiSpring.persistence.entity.categoria getCategoria() {
+    public Categoria getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(com.example.eComerceApiSpring.persistence.entity.categoria categoria) {
+    public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
 
@@ -59,12 +59,12 @@ public class producto {
         this.idCategoria = idCategoria;
     }
 
-    public String getCodigoBarras() {
-        return codigoBarras;
+    public String getCodigoBarra() {
+        return codigoBarra;
     }
 
-    public void setCodigoBarras(String codigoBarras) {
-        this.codigoBarras = codigoBarras;
+    public void setCodigoBarra(String codigoBarra) {
+        this.codigoBarra = codigoBarra;
     }
 
     public Double getPrecioVenta() {

@@ -4,25 +4,43 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "compras_productos")
-public class compraProducto {
+public class CompraProducto {
     @EmbeddedId
-    private compraProductoPk Id;
+    private CompraProductoPk Id;
     private Integer cantidad;
     private Double total;
     private Boolean estado;
 
     @ManyToOne
+    @MapsId("idCompra")
     @JoinColumn(name = "id_compra", insertable = false, updatable = false)
-    private compra compras;
+    private Compra compras;
 
     @ManyToOne
     @JoinColumn(name = "id_producto", insertable = false, updatable = false)
-    private producto producto;
-    public compraProductoPk getId() {
+    private Producto producto;
+
+    public Compra getCompras() {
+        return compras;
+    }
+
+    public void setCompras(Compra compras) {
+        this.compras = compras;
+    }
+
+    public Producto getProducto() {
+        return producto;
+    }
+
+    public void setProducto(Producto producto) {
+        this.producto = producto;
+    }
+
+    public CompraProductoPk getId() {
         return Id;
     }
 
-    public void setId(compraProductoPk id) {
+    public void setId(CompraProductoPk id) {
         Id = id;
     }
 

@@ -7,7 +7,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "categorias")
-public class categoria implements Serializable {
+public class Categoria implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_categoria")
@@ -17,14 +17,14 @@ public class categoria implements Serializable {
     private String descripcion;
 
     @OneToMany(mappedBy = "categoria")
-    private List<producto> productos;
+    private List<Producto> Productos;
 
-    public List<producto> getProductos() {
-        return productos;
+    public List<Producto> getProductos() {
+        return Productos;
     }
 
-    public void setProductos(List<producto> productos) {
-        this.productos = productos;
+    public void setProductos(List<Producto> Productos) {
+        this.Productos = Productos;
     }
 
     public Integer getIdCategoria() {
