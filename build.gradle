@@ -20,11 +20,8 @@ dependencies {
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'org.hibernate.validator:hibernate-validator:7.0.3.Final'
-	implementation 'org.springdoc:springdoc-openapi-ui:1.5.12'
-	implementation 'org.springdoc:springdoc-openapi-webmvc-core:1.5.12'
-	testImplementation('org.springframework.boot:spring-boot-starter-test') {
-		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-	}
+	implementation 'org.springdoc:springdoc-openapi-ui:1.7.0'
+	implementation 'org.springdoc:springdoc-openapi-webflux-ui:1.6.4'
 }
 
 tasks.named('test') {
