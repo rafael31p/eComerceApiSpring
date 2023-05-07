@@ -1,4 +1,4 @@
-package com.example.eComerceApiSpring.webController;
+package com.example.eComerceApiSpring.web.Controller;
 
 import com.example.eComerceApiSpring.domain.Purchase;
 import com.example.eComerceApiSpring.domain.service.PurchaseService;
