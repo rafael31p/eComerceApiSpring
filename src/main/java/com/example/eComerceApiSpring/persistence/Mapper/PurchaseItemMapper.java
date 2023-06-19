@@ -1,7 +1,6 @@
 package com.example.eComerceApiSpring.persistence.Mapper;
 
 import com.example.eComerceApiSpring.domain.PurchaseItem;
-import com.example.eComerceApiSpring.persistence.entity.Compra;
 import com.example.eComerceApiSpring.persistence.entity.CompraProducto;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;

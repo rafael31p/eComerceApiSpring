@@ -8,6 +8,7 @@ import com.example.eComerceApiSpring.persistence.entity.Compra;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 @Repository
@@ -31,6 +32,7 @@ public class CompraRepository implements PurchaseRepository {
     @Override
     public Purchase save(Purchase purchase) {
         Compra compra = purchaseMapper.toCompra(purchase);
+        compra.setFecha(LocalDateTime.now());
         compra.getCompraProductos().forEach(compraProducto -> compraProducto.setCompras(compra));
         return purchaseMapper.toPurchase(compraCrudRepository.save(compra));
     }
