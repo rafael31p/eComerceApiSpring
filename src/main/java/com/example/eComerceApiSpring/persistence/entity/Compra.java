@@ -1,7 +1,9 @@
 package com.example.eComerceApiSpring.persistence.entity;
 
+import com.example.eComerceApiSpring.utils.enums.MedioPagoEnum;
 import jakarta.persistence.*;
 
+import java.lang.reflect.Type;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -17,7 +19,8 @@ public class Compra {
 
     private LocalDateTime fecha;
     @Column(name = "medio_pago")
-    private String medioPago;
+    @Enumerated(EnumType.STRING)
+    private MedioPagoEnum medioPago;
 
     private String comentario;
     private String estado;
@@ -68,11 +71,11 @@ public class Compra {
         this.fecha = fecha;
     }
 
-    public String getMedioPago() {
+    public MedioPagoEnum getMedioPago() {
         return medioPago;
     }
 
-    public void setMedioPago(String medioPago) {
+    public void setMedioPago(MedioPagoEnum medioPago) {
         this.medioPago = medioPago;
     }
 

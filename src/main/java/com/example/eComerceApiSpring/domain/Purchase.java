@@ -1,6 +1,7 @@
 package com.example.eComerceApiSpring.domain;
 
 import com.example.eComerceApiSpring.persistence.entity.Cliente;
+import com.example.eComerceApiSpring.utils.enums.MedioPagoEnum;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -10,7 +11,7 @@ public class Purchase implements Serializable {
     private Integer purchaseId;
     private String clientId;
     private LocalDateTime date;
-    private String paymentMethod;
+    private MedioPagoEnum paymentMethod;
     private String comment;
     private String status;
     private Cliente client;
@@ -40,11 +41,11 @@ public class Purchase implements Serializable {
         this.date = date;
     }
 
-    public String getPaymentMethod() {
+    public MedioPagoEnum getPaymentMethod() {
         return paymentMethod;
     }
 
-    public void setPaymentMethod(String paymentMethod) {
+    public void setPaymentMethod(MedioPagoEnum paymentMethod) {
         this.paymentMethod = paymentMethod;
     }
 

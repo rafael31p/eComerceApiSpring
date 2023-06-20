@@ -1,7 +1,6 @@
 package com.example.eComerceApiSpring.domain.repository;
 
 import com.example.eComerceApiSpring.domain.Customer;
-import com.example.eComerceApiSpring.domain.Purchase;
 import com.example.eComerceApiSpring.persistence.entity.Cliente;
 import com.example.eComerceApiSpring.persistence.entity.Compra;
 
